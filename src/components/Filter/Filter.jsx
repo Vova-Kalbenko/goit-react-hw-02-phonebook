@@ -8,7 +8,6 @@ const Filter = ({ value, onChange }) => (
         type="text"
         name="filter"
         placeholder="Enter search name"
-        title="Enter search name"
         onChange={onChange}
         value={value}
         className={css.filterLabel}

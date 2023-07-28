@@ -7,8 +7,6 @@ class Form extends Component {
     name: '',
     number: '',
   };
-  nameInputId = nanoid();
-  numberInputId = nanoid();
   handleInputChange = e => {
     const { name, value } = e.currentTarget;
     if (name === '' || this.number === '') {
