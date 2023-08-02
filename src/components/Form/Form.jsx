@@ -19,9 +19,12 @@ class Form extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const { name, number } = this.state;
+    // В ПРОПСЫ ПРИЕЗЖАЕТ ОБЬЕКТ С МАСИВАМИ КОНТРАКТОВ+МЕТОДОМ ОНСАБМИТ 
     const matchName = this.props.contactsName.some(
       contactName => name.toLowerCase() === contactName.toLowerCase()
     );
+    // ЧЕРЕЗ ТОЧКУ ОБРАЩАЕМСЯ ИМЕННО К ЭЭТОМУ МАСИВУ И С ПОМОЩЬЮ МЕТОДА SOME()
+    // СРАВНИВАЕМ ЕСТЬ ЛИ ТАКОЙ КОНТАКТ УЖЕ В КНИГЕ
     if (matchName) {
       return alert(`${name} is already in contacts`);
     }
@@ -89,3 +92,7 @@ Form.propTypes = {
   contactsName: PropTypes.arrayOf(PropTypes.string.isRequired),
 };
 export default Form;
+
+
+
+

@@ -14,17 +14,18 @@ class PhoneBook extends Component {
     ],
     filter: '',
   };
-
+ 
   handleAddNewContact = newContact => {
     this.setState(prevState => ({
       contacts: [...prevState.contacts, newContact],
     }));
   };
-
+    // МЕТОД КОТОРЫЙ ДОБАВЛЯЕТ НОВЫЙ КОНТАКТ ПО ЛОГИКЕ РАССПЫЛЕНИЯ ПРЕД МАСИВА(СТЕЙТА)
+  // И ДОБАВЛЕНИЯ НОВОГО
   changeFilter = event => {
     this.setState({ filter: event.currentTarget.value });
   };
-
+ 
   getVisibleContacts = () => {
     const { contacts, filter } = this.state;
     const normalizeFilter = filter.toLowerCase();
